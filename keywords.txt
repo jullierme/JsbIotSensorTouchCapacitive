@@ -1,0 +1,10 @@
+JsbIotSensorTouchCapacitive	KEYWORD1
+ativarLog	KEYWORD2
+desativarLog	KEYWORD3
+setSensibilidade	KEYWORD4
+getSensibilidade	KEYWORD5
+getCapacitancia	KEYWORD6
+isReleAtivado	KEYWORD7
+getLuzMinimaParaLedDesligado	KEYWORD8
+setLuzMinimaParaLedDesligado	KEYWORD9
+executar	KEYWORD10
