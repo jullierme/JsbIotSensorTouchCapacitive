@@ -37,7 +37,7 @@ class JsbIotSensorTouchCapacitive{
 		short _DESLIGA_RELE = HIGH;
 		long _capacitanciaSensor;
 		bool _isReleAtivado = false;
-		CapacitiveSensor _cs = CapacitiveSensor(4, 6);
+		CapacitiveSensor _cs;
 
 		void ativaOuDesativaRele();
 		void controlarLuzLed(int potencia);

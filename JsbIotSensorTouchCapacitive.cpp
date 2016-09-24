@@ -7,7 +7,10 @@
 #include "JsbIotSensorTouchCapacitive.h"
 #include "CapacitiveSensor.h"
 
-JsbIotSensorTouchCapacitive::JsbIotSensorTouchCapacitive(short pinSensorCapacitivo1, short pinSensorCapacitivo2, short pinRele, short pinLed, short sensibilidade){
+JsbIotSensorTouchCapacitive::JsbIotSensorTouchCapacitive(
+	short pinSensorCapacitivo1, short pinSensorCapacitivo2,
+	short pinRele, short pinLed, short sensibilidade){
+		
 	_pinSensorCapacitivo1 = pinSensorCapacitivo1;
 	_pinSensorCapacitivo2 = pinSensorCapacitivo2;
 	_pinRele = pinRele;
