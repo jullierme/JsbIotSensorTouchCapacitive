@@ -9,7 +9,7 @@
 
 JsbIotSensorTouchCapacitive::JsbIotSensorTouchCapacitive(
 	short pinSensorCapacitivo1, short pinSensorCapacitivo2,
-	short pinRele, short pinLed, int sensibilidade){
+	short pinRele, short pinLed, long sensibilidade){
 
 	_pinSensorCapacitivo1 = pinSensorCapacitivo1;
 	_pinSensorCapacitivo2 = pinSensorCapacitivo2;
@@ -36,11 +36,11 @@ void JsbIotSensorTouchCapacitive::desativarLog(){
 	_ativarLog = false;
 }
 
-void JsbIotSensorTouchCapacitive::setSensibilidade(int sensibilidade){
+void JsbIotSensorTouchCapacitive::setSensibilidade(long sensibilidade){
 	_sensibilidade = sensibilidade;
 }
 
-int JsbIotSensorTouchCapacitive::getSensibilidade(){
+long JsbIotSensorTouchCapacitive::getSensibilidade(){
 	return _sensibilidade;
 }
 

@@ -3,7 +3,7 @@
 const byte pinLed = 10;
 const byte pinRele = 6;
 const short luzMinimaParaLedDesligado = 10;
-const short sensibilidade = 50;
+const long sensibilidade = 50;
 const byte pinSensorCapacitivo1 = 4;
 const byte pinSensorCapacitivo2 = 2;
 
