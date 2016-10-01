@@ -14,11 +14,11 @@ class JsbIotSensorTouchCapacitive{
 	public:
 		JsbIotSensorTouchCapacitive(short pinSensorCapacitivo1,
 			short pinSensorCapacitivo2, short pinRele, short pinLed,
-			short sensibilidade);
+			int sensibilidade);
 		void ativarLog();
 		void desativarLog();
-		void setSensibilidade(short sensibilidade);
-		short getSensibilidade();
+		void setSensibilidade(int sensibilidade);
+		int getSensibilidade();
 		long getCapacitancia();
 		bool isReleAtivado();
 		short getLuzMinimaParaLedDesligado();
@@ -30,7 +30,7 @@ class JsbIotSensorTouchCapacitive{
 		short _pinSensorCapacitivo2;
 		short _pinRele;
 		short _pinLed;
-		short _sensibilidade;
+		int _sensibilidade;
 		bool _ativarLog;
 		short _luzMinimaParaLedDesligado = 10;
 		short _ACIONA_RELE = LOW;
