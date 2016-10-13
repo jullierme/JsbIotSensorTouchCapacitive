@@ -55,6 +55,12 @@ bool JsbIotSensorTouchCapacitive::isReleAtivado(){
 void JsbIotSensorTouchCapacitive::executar(){
 	_capacitanciaSensor = _cs.capacitiveSensor(30);
 
+	if(_ativarLog){
+		Serial.print("_capacitanciaSensor ");
+		Serial.println(_capacitanciaSensor);
+	}
+
+
 	if (_capacitanciaSensor > _sensibilidade) {
     ativaOuDesativaRele();
   }
