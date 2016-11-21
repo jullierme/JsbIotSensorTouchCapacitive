@@ -8,3 +8,7 @@ isReleAtivado	KEYWORD7
 getLuzMinimaParaLedDesligado	KEYWORD8
 setLuzMinimaParaLedDesligado	KEYWORD9
 executar	KEYWORD10
+getSensor	KEYWORD11
+getResolucaoSensor	KEYWORD12
+setResolucaoSensor	KEYWORD13
+begin	KEYWORD14

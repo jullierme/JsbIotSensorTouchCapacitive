@@ -16,7 +16,9 @@ JsbIotSensorTouchCapacitive::JsbIotSensorTouchCapacitive(
 	_pinRele = pinRele;
 	_pinLed = pinLed;
 	_sensibilidade = sensibilidade;
+}
 
+void JsbIotSensorTouchCapacitive::begin(){
 	pinMode(_pinLed, OUTPUT);
 	pinMode(_pinRele, OUTPUT);
 
@@ -36,6 +38,14 @@ void JsbIotSensorTouchCapacitive::desativarLog(){
 	_ativarLog = false;
 }
 
+void JsbIotSensorTouchCapacitive::setResolucaoSensor(uint8_t resolucaoSensor){
+	_resolucaoSensor = resolucaoSensor;
+}
+
+uint8_t JsbIotSensorTouchCapacitive::getResolucaoSensor(){
+	return _resolucaoSensor;
+}
+
 void JsbIotSensorTouchCapacitive::setSensibilidade(long sensibilidade){
 	_sensibilidade = sensibilidade;
 }
@@ -52,8 +62,12 @@ bool JsbIotSensorTouchCapacitive::isReleAtivado(){
 	return _isReleAtivado;
 }
 
+CapacitiveSensor JsbIotSensorTouchCapacitive::getSensor(){
+	return _cs;
+}
+
 void JsbIotSensorTouchCapacitive::executar(){
-	_capacitanciaSensor = _cs.capacitiveSensor(30);
+	_capacitanciaSensor = _cs.capacitiveSensor(_resolucaoSensor);
 
 	if(_ativarLog){
 		Serial.print("_capacitanciaSensor ");

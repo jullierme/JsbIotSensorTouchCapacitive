@@ -17,6 +17,8 @@ class JsbIotSensorTouchCapacitive{
 			long sensibilidade);
 		void ativarLog();
 		void desativarLog();
+		void setResolucaoSensor(uint8_t resolucaoSensor);
+		uint8_t getResolucaoSensor();
 		void setSensibilidade(long sensibilidade);
 		long getSensibilidade();
 		long getCapacitancia();
@@ -28,6 +30,8 @@ class JsbIotSensorTouchCapacitive{
 		void ativaOuDesativaRele();
 		void acionarRele();
 		void desligarRele();
+		CapacitiveSensor getSensor();
+		void begin();
 
 	private:
 		short _pinSensorCapacitivo1;
@@ -41,6 +45,7 @@ class JsbIotSensorTouchCapacitive{
 		short _DESLIGA_RELE = HIGH;
 		long _capacitanciaSensor;
 		bool _isReleAtivado = false;
+		uint8_t _resolucaoSensor = 30;
 		CapacitiveSensor _cs = CapacitiveSensor(4,5);
 
 
